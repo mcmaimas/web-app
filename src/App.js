@@ -1,25 +1,34 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './Components/Navigation/NavBar';
 
 class App extends Component {
+  state = {
+    pages: [
+        {name: 'Style 1'},
+        {name: 'Style 2'},
+        {name: 'Style 3'},
+        {name: 'Style 4'}
+    ],
+    currentPage: 'Style 1'
+  }
+
+  getCurrentPage = (newCurrent) => {
+    this.setState({
+      currentPage: newCurrent
+    })
+  }
+
   render() {
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <NavBar
+          pages={this.state.pages}
+          click={this.getCurrentPage}/>
+
+          <p>{this.state.currentPage}</p>
+
       </div>
     );
   }
