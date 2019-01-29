@@ -1,4 +1,5 @@
 .NavBar{
+  position: fixed;
   padding:16px;
   float: left;
   height: 100vh;
