@@ -1,10 +1,15 @@
 import React from 'react';
+import './NavItem.css';
 
 const navitem = (props) => {
+  const active = {};
+
+  if(props.name === props.current) {
+    active.color = 'red'
+  }
+
   return (
-    <div className='NavItem'>
-      <p onClick={props.click}>{props.name}</p>
-    </div>
+      <p className='navItem' onClick={props.click} style={active}><b>{props.name}</b></p>
   );
 }
 

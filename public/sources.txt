@@ -1,0 +1,4 @@
+Background Image: https://css-tricks.com/perfect-full-page-background-image/
+Menu Icon: https://www.w3schools.com/cssref/css_entities.asp
+Animated Button: https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1
+Active Element: https://www.w3schools.com/cssref/sel_active.asp
