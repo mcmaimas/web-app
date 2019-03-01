@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import './NavBar.css';
-import NavItem from './NavItem';
+import '../NavBar.css';
+import HNavItem from '../NavItem';
 
-class NavBar extends Component {
+class HNavBar extends Component {
 
   constructor(props) {
     super(props);
     this.state={
       pages: props.pages,
-      showMenu: true,
-      current: props.current
+      showMenu:true
     };
   }
 
@@ -21,34 +20,32 @@ class NavBar extends Component {
 
   //Passes the current page back up to parent
   handleClick = (index) => {
-    this.setState({current: this.state.pages[index].name})
     this.props.click(this.state.pages[index].name);
   }
 
   render() {
-
     const navBarStyle = {
-      width: '0%'
+      height: '5%',
+      width: '100%'
     };
+    const navItemStyle = {
+      float: 'left'
+    }
+
 
 
     let pages = null;
     if (this.state.showMenu) {
       pages = (
-        <ul className='pagesList'>
+        <ul>
           {this.state.pages.map((page, index) => {
-            return <NavItem
+            return <HNavItem
               name={page.name}
               click={() => this.handleClick(index)}
-              current={this.state.current}/>
+              style={navItemStyle}/>
           })}
         </ul>
       );
-
-      navBarStyle.width = '20%';
-      navBarStyle.height = '100vh';
-      navBarStyle.opacity = '0.85';
-      navBarStyle.transform = 'skewX(-10deg)';
     }
     return (
       <div className='NavBar' style={navBarStyle}>
@@ -62,4 +59,4 @@ class NavBar extends Component {
   }
 }
 
-export default NavBar;
+export default HNavBar;

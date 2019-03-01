@@ -16,3 +16,13 @@
   min-width: 50%;
   min-height: 50%;
 }
+
+.text-block {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  opacity: 0.5;
+  z-index: 1;
+}

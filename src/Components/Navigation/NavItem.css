@@ -1,0 +1,12 @@
+.navItem {
+  display: block;
+  color: white;
+  text-align: right;
+  padding: 0px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navItem:hover {
+  background-color: red;
+}

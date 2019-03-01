@@ -1,30 +1,34 @@
 .NavBar{
   position: fixed;
-  padding:16px;
+  padding:0px;
   float: left;
-  height: 100vh;
-  background-color: #212F3C;
-  text-align: center;
+  height: 0vh;
+  border-radius: 8px;
+  background-color: black;
+  text-align: left;
   color: white;
   transition: all 0.5s;
   font-family: 'Courier New';
+  z-index: 1;
 }
 
-.NavItem:active {
-  background-color: lightblue;
 
+
+.pagesList {
+  display: block;
+  margin: 0;
+  padding: 0;
+  background-color: black;
 }
 
-.NavItem:hover {
-  color: #3971E1;
-}
 
 .menuButton {
-  display: inline-block;
+  float:left;
+  display: block;
   border-radius: 8px;
   background-color: #white;
-  border: none;
-  color: #212F3C;
+  border: #white;
+  color: black;
   font-size: 28px;
   padding: 0px;
   width: 30px;
@@ -38,6 +42,6 @@
 }
 
 .menuButton:hover{
-  background-color: lightblue; /* Green */
-  color: white;
+  background-color: grey;
+  color: #white;
 }
