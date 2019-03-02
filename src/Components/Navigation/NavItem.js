@@ -5,7 +5,7 @@ const navitem = (props) => {
   const active = {};
 
   if(props.name === props.current) {
-    active.color = 'red'
+    active.backgroundImage = 'linear-gradient(to right, #40a9f9 , #d33ff9)';
   }
 
   return (

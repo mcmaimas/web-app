@@ -6,6 +6,7 @@
   border-radius: 8px;
   background-color: black;
   text-align: left;
+  border: solid white 1px;
   color: white;
   transition: all 0.5s;
   font-family: 'Courier New';

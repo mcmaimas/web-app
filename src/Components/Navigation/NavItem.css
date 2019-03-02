@@ -8,5 +8,5 @@
 }
 
 .navItem:hover {
-  background-color: red;
+  background-image: linear-gradient(to right, #40a9f9 , #d33ff9);
 }
